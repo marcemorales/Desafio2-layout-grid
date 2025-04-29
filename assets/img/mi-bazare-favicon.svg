@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con degradado elegante -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A5ACD" /> <!-- Slate Blue -->
+      <stop offset="100%" stop-color="#483D8B" /> <!-- Dark Slate Blue -->
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6E6FA" /> <!-- Lavender -->
+      <stop offset="100%" stop-color="#FFFFFF" /> <!-- White -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Círculo de fondo -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGradient)" />
+  
+  <!-- Borde decorativo -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#9370DB" stroke-width="1.5" stroke-dasharray="2,1" />
+  
+  <!-- Iniciales MB estilizadas -->
+  <text x="50" y="57" font-family="'Palatino Linotype', serif" font-size="36" font-weight="bold" 
+        text-anchor="middle" fill="url(#textGradient)">MB</text>
+  
+  <!-- Pequeño símbolo estilizado que sugiere un bazar -->
+  <path d="M42 65 L58 65 L58 70 L42 70 Z" fill="#DDA0DD" /> <!-- Decorativo base -->
+  <path d="M35 65 L65 65 L65 62 L35 62 Z" fill="#E6E6FA" /> <!-- Decorativo techo -->
+</svg>

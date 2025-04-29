@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+  /* Layout principal */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: 100vh;
+}
+
+  /* Encabezado */
+.header {
+    grid-area: header;
+    background-color: #07577e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+  /* Barra lateral */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.sidebar li {
+    color: #444;
+    cursor: pointer;
+}
+
+  /* Contenido principal */
+.main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+  /* Grilla de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fija 3 columnas */
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+  /* Tarjetas */
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.8rem;
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.card button {
+    background-color: #07577e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+  /* Pie de página */
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1rem;
+    background-color: #3a7390;
+    color: white;
+    font-size: 0.9rem;
+}
+
+  /* Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .sidebar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    }
+}
