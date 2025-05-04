@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Layout principal usando Grid */
+/* Layout principal usando grid */
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -19,7 +18,6 @@
     gap: 0;
 }
 
-/* Encabezado */
 .header {
     grid-area: header;
     background-color: #07577e;
@@ -34,7 +32,7 @@
     margin-right: 1rem;
 }
 
-/* Menú de navegación */
+/* Menú de navegación con grid */
 .main-nav ul {
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -56,7 +54,7 @@
     border-radius: 3px;
 }
 
-  /* Barra lateral */
+/* Barra lateral con flex */
 .sidebar {
     grid-area: sidebar;
     background-color: #f2f2f2;
@@ -89,15 +87,15 @@
     padding: 1rem;
 }
 
-  /* Grilla de productos */
+  /* Grilla de productos con grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Fija 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     justify-items: center;
 }
 
-  /* Tarjetas */
+  /* Tarjetas con flex */
 .card {
     background-color: white;
     display: flex;
@@ -144,7 +142,7 @@
     border-radius: 3px;
 }
 
-  /* Pie de página */
+  /* Pie de página footer */
 .footer {
     grid-area: footer;
     text-align: center;
@@ -154,15 +152,12 @@
     font-size: 0.9rem;
 }
 
-  /* Responsive */
-/* Tablet: 2 columnas */
 @media (max-width: 1024px) and (min-width: 769px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Móvil: 1 columna */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-areas:
